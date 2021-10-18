@@ -1,0 +1,62 @@
+
+<html>
+    <head>
+       
+    </head>
+    <body>
+          
+        <form action="" method="post">
+            <table>
+                
+                <tr><td>nhập năm</td>
+                    <td><input type="text" id="nhapNgay"></td>
+                    
+                 
+                        <td><input type="button" onclick="click_tinhsongay();" value="Tính số ngày"></td></tr>
+                        
+                        <tr><td>
+                            <p id="hien_thi"></p>
+                        </td></tr>
+            </table>
+        </form>
+    
+        <script>
+            function click_tinhsongay()
+            {
+                let nhapNgay=parseInt(document.getElementById("nhapNgay").value);
+                let hienthi_thang;
+                switch(nhapNgay)
+                {
+                    case 1:
+                    case 3: 
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10: 
+                    case 12:              
+                        hienthi_thang="Tháng " +nhapNgay+ " có 31 ngày";
+                        break;
+                    case 2:
+                        hienthi_thang="Tháng "+nhapNgay+ " có 28 nhoặc 29 ngày";  
+                        break;  
+                    case 4: 
+                    case 6: 
+                    case 9:
+                    case 11:    
+                    hienthi_thang="Tháng "+nhapNgay+ " có 30 ngày";   
+                    break;
+                    
+                }
+                
+                document.getElementById("hien_thi").innerHTML=hienthi_thang;
+                
+            } 
+            
+             
+           </script> 
+    </body>
+   
+</html>
+
+
+
